@@ -14,11 +14,11 @@ class PostController extends Controller
      */
     public function index()
     {
-        /*return Post::where('title','Winter Soldier')->get(); 
-        return Post::orderBy('title','desc')->take(1)->get();*/
-        
-        return DB::select('SELECT id FROM posts'); 
+        /*return Post::where('title','Winter Soldier')->get(); */
+        return Post::orderBy('title','desc')->take(1)->get();
         /*
+        return DB::select('SELECT id FROM posts'); 
+        
         $posts = Post::orderBy('id','asc')->paginate(2);
         return view('posts.index')->with('posts',$posts);
         */
